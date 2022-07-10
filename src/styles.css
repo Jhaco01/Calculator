@@ -1,0 +1,109 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('./assets/fonts/digital-7.ttf');
+}
+
+section{
+    margin: auto;
+    width: 90%;
+}
+
+.primary-box{
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+    margin-top: 6%;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 85vh;
+    background-color: rgba(163, 138, 180, 0.463);
+    border-radius: 3%;
+}
+
+.results-screen{
+    width: 70%;
+    height: 12vh;
+    background-color: rgb(113, 198, 255);
+    margin-bottom: 5vh;
+    margin-right: 10px;
+    border-style: groove;
+    border-radius: 5%;
+    font-family: 'digital-clock-font';
+    font-size: 50px;
+    line-height: 12vh;
+    text-align: end;
+    overflow: hidden;    
+}
+
+.btn{
+    width: 22%;
+    height: 8vh;
+    border-radius: 5%;
+    border-style: none;
+    margin: 2% 1%;
+    font-family: 'Anton', sans-serif;   
+    font-size: 120%; 
+    background-color: aliceblue;
+    transition: all 0.5s;
+}
+
+.btn:hover{
+    background-color: rgba(240, 248, 255, 0.648);
+    cursor: pointer;
+}
+
+.btn.red{
+    background-color: rgb(229, 137, 137);
+}
+
+.btn.orange{
+    background-color: rgb(244, 197, 110);
+}
+
+.btn.blue{
+    background-color: rgb(151, 180, 234);
+}
+
+.btn.green{
+    background-color: rgb(164, 255, 164);
+}
+
+.btn.red:hover{
+    background-color: rgb(229, 106, 106);
+}
+
+.btn.orange:hover{
+    background-color: rgb(245, 180, 60);
+}
+
+.btn.blue:hover{
+    background-color: rgb(114, 156, 236);
+}
+
+.btn.green:hover{
+    background-color: rgb(73, 255, 73);
+}
+
+@media screen and (max-width: 570px) {
+    .buttons{
+        margin-left: 10%;
+    }
+    .btn{
+        width: 19%;               
+    }
+    .results-screen{
+        font-size: 35px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .primary-box{
+        width: 95%;
+    }
+    .results-screen{
+        font-size: 35px;
+        overflow: hidden;
+    }
+}
