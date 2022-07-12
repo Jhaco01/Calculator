@@ -21,7 +21,7 @@ keypad.addEventListener('click', (event)=>{
 
         if (elementName.includes('button')&&((keypadElement.classList[1] != 'd'))){    
             
-            if ((parseInt(numBtns[0])===result)&&(numBtns.length===1)&&(keypadElement.textContent.match(TRegExp))){
+            if (((parseInt(numBtns[0])===result)||(parseFloat(numBtns[0])===result))&&(numBtns.length===1)&&(keypadElement.textContent.match(TRegExp))){
                 reset();
             }
             
