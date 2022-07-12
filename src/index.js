@@ -1,6 +1,7 @@
 import './styles.css';
 
 let numBtns = [];
+let result;
 const screen = document.querySelector('.results-screen');
 const keypad = document.querySelector('.buttons');
 
@@ -8,16 +9,21 @@ keypad.addEventListener('click', (event)=>{
 
     const elementName = event.target.localName;
     const keypadElement = event.target;   
+    const TRegExp = /\d/;
 
     
     if (keypadElement.textContent === '='){
-        
+                
         screen.innerHTML = '';        
         executor();          
 
     } else {
 
-        if (elementName.includes('button')&&((keypadElement.classList[1] != 'd'))){        
+        if (elementName.includes('button')&&((keypadElement.classList[1] != 'd'))){    
+            
+            if ((parseInt(numBtns[0])===result)&&(numBtns.length===1)&&(keypadElement.textContent.match(TRegExp))){
+                reset();
+            }
             
             numBtns.push(keypadElement.textContent);  
 
@@ -47,11 +53,13 @@ const executor = () => {
 
     const string = numBtns.join('');
 
-    reset();
+    reset();    
 
-    const result = eval(string)
+    result = eval(string)    
+
+    numBtns.push(result.toString());
 
     screen.innerHTML = `${ result }`;
- 
+    
 
 }

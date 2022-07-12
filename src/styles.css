@@ -100,8 +100,7 @@ section{
 
 @media screen and (max-width: 470px) {
     .primary-box{
-        width: 98%;
-        height: 100%;
+        width: 100%;        
     }
     .results-screen{
         font-size: 35px;
