@@ -1,13 +1,7 @@
-# Webpack Starter
+# Calculator app
 
-Este es el proyecto inicial para crear aplicaciones utilizando webpack.
+Proyect built on HTML5, CSS and Javascript.
 
-### Notas:
+### Note:
 
-Recuerden reconstruir los modulos de node 
-
-```npm install```
-
-Y para construir del build, recuerden:
-
-```npm run build```
+It does not accept octal literals, so, please don't writte left zeros in your numbers.
